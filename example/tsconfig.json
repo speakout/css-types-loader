@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "dist"
+  }
+}
