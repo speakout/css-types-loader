@@ -1,1 +1,2 @@
-src/*.d.ts
+**/*.less.d.ts
+**/*.css.d.ts
