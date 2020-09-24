@@ -151,3 +151,5 @@ export const home_title: string;
 export const home_info: string;
 export const red_title: string;
 ```
+
+[Here is a complete example](https://github.com/speakout/css-types-loader/tree/master/example)
