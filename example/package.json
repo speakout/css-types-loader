@@ -1,7 +1,7 @@
 {
-  "name": "css-types-example",
+  "name": "css-typings-example",
   "version": "1.0.0",
-  "description": "css-types-loader example",
+  "description": "css-typings-loader example",
   "main": "index.js",
   "author": "speakout",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "css-loader": "^4.3.0",
+    "css-typings-loader": "^1.0.0",
     "html-webpack-plugin": "^4.5.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.1",

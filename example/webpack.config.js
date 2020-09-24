@@ -27,7 +27,7 @@ module.exports = {
         include: path.resolve('./src'),
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader?modules', 'css-types-loader', 'less-loader',
+          'css-loader?modules', 'css-typings-loader', 'less-loader',
         ],
       }
     ],

@@ -1,5 +1,5 @@
 {
-  "name": "css-types-loader",
+  "name": "css-typings-loader",
   "version": "1.0.0",
   "description": "tiny webpack loader to generate TypeScript typings for CSS modules",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/speakout/css-types-loader"
+    "url": "https://github.com/speakout/css-typings-loader"
   },
   "keywords": [
     "Webpack",
