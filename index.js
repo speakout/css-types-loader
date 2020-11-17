@@ -5,10 +5,18 @@ function parseSelectors(selectors) {
   let exp = /[\.#]([a-zA-Z0-9_-]+)/g
   let names = []
   for (let i = 0; i < selectors.length; i++) {
+    selectors[i] = selectors[i].replace(/\((.+?)\)/g, string => {
+      let str = string.substring(1, string.length - 1)
+      return `(${Buffer.from(str).toString('hex')})`
+    })
     selectors[i] = selectors[i].replace(exp, (string) => {
       let newName = string.replace(/-/g, '_')
       names.push(newName.substr(1))
       return newName
+    })
+    selectors[i] = selectors[i].replace(/\((.+?)\)/g, string => {
+      let str = string.substring(1, string.length - 1)
+      return `(${Buffer.from(str, 'hex').toString('utf-8')})`
     })
   }
   return {

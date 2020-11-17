@@ -16,7 +16,7 @@ yarn add css-typings-loader
 
 # Tips
 
-`css-typings-loader` will convert CSS selector(class/id) names to `snake_case` style.
+`css-typings-loader` will convert CSS selector(class/id) names to `snake_case` style, `:global(xxx)` will not be converted.
 
  **When building for the first time, TypeScript may report errors because the typing files has not been generated yet, when finished, there should be no more errors.**
 
@@ -26,6 +26,7 @@ input
 .foo { }
 .foo-abc { }
 .foo_def { }
+:global(.abc-def) { }
 ```
 
 output
@@ -34,6 +35,7 @@ output
 .foo { }
 .foo_abc { }
 .foo_def { }
+.abc-def { }
 ```
 
 typings
@@ -114,7 +116,7 @@ import style from './style.less'
 export default function() {
   return (
     <div className={style.home_wrap}>
-      <div className={`${style.home_title} ${style.red_title}`}>css-typings-loader</div>
+      <div className={style.home_title + ' red-title'}>css-typings-loader</div>
       <h2 className={style.home_info}>Thanks for using!</h2>
     </div>
   )
@@ -144,7 +146,7 @@ style.less
 }
 
 @media (max-width: 800px) {
-  .red-title {
+  :global(.red-title) {
     color: red;
   }
 }
@@ -159,7 +161,6 @@ export interface Styles {
   home_wrap: string;
   home_title: string;
   home_info: string;
-  red_title: string;
 }
 declare const styles: Styles;
 export default styles;
