@@ -1,6 +1,6 @@
 {
   "name": "css-typings-loader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "tiny webpack loader to generate TypeScript typings for CSS modules",
   "main": "index.js",
   "author": "speakout",

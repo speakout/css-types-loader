@@ -35,7 +35,8 @@ function parseRules(rules) {
 module.exports = function (source) {
   let ast = css.parse(source)
   let names = parseRules(ast.stylesheet.rules)
-  let types = names.map((item) => `export const ${item}: string;`).join('\n')
-  fs.writeFileSync(this.resourcePath + '.d.ts', types, 'utf-8')
+  let types = names.map((item) => `  ${item}: string;`).join('\n')
+  let content = `export interface Styles {\n${types}\n}\ndeclare const styles: Styles;\nexport default styles;`
+  fs.writeFileSync(this.resourcePath + '.d.ts', content, 'utf-8')
   return css.stringify(ast)
 }

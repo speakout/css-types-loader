@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import * as style from './style.less'
+import style from './style.less'
 
 export default function() {
   return (

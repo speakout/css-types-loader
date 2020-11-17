@@ -1,4 +1,7 @@
 declare module '*.less' {
-  const content: any
-  export default content
+  interface Styles {
+    [propName: string]: string
+  }
+  const styles: Styles
+  export default styles
 }
